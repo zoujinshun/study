@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript 对象基本操作</title>
+</head>
+<body>
+</body>
+<script>
+    'use strict';
+
+    var obj_1 = {
+        name : 'zjs',
+        age  : 23,
+        like : ['basketball','sing'],
+        'love-girl' : 'dly'
+    };
+
+    //获取对象属性
+    console.log(obj_1.name);
+    //新增对象属性
+    obj_1.new = 'new';
+    console.log(obj_1);
+    //删除对象属性
+    delete obj_1.new;
+    console.log(obj_1);
+    //带特殊字符的属性
+    console.log(obj_1['love-girl']);
+    //判断是否拥有某一个属性
+    if('name' in obj_1){
+        console.log('name in obj_1');
+    }
+    //有可能属性是通过继承得来的，如 toString 每个对象最终的原型链都会指向object 所以每个对象都有toString这个属性
+    if('toString' in obj_1){
+        console.log('toString in obj_1');
+    }
+    //如何判断属性是不是自身的
+    if(obj_1.hasOwnProperty('toString')){
+        console.log('toString real in obj_1');
+    }
+</script>
+</html>

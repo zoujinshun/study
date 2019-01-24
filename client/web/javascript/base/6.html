@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript map 和 set</title>
+</head>
+<body>
+</body>
+<script>
+    'use strict';
+
+    //map 和 set 是es6才有的
+
+    var _map = new Map([['zjs',100],['dly',101]]);
+    console.log(_map.get('zjs'));
+    _map.set('love',100);
+    console.log(_map);
+    _map.delete('love');
+    console.log(_map);
+
+    var _set = new Set(['zjs','dly','dly']);
+    console.log(_set);
+
+    // js中把 array  map  set 都视作iterable 类型,iterable类型使用 for of进行遍历
+    for (var x of _map){
+        console.log(x[0] + '=' + x[1]);
+    }
+    for (var x of _set){
+        console.log(x);
+    }
+
+    // iterable 类型 最好使用 forEach 方法进行遍历
+    _map.forEach(function(value,key,self){
+        console.log(value);
+        console.log(key);
+        console.log(self);
+    });
+
+    _set.forEach(function(value,value2,self){
+        console.log(value);
+        console.log(value2);
+        console.log(self);
+    });
+
+
+</script>
+</html>

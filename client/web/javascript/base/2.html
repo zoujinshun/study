@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript 字符串</title>
+</head>
+<body>
+</body>
+<script>
+    'use strict';
+
+    var str_1 = 'hello,world';
+    //指定下标输出
+    console.log(str_1[0]);  //h
+    console.log(str_1[16]);  //undefined
+    //连接
+    console.log('hello,' + 'world');
+    console.log(`${str_1}`);
+    //段落
+    var str_2 = `
+        zjs
+        dly
+    `;
+    console.log(str_2);
+    //转大写
+    var str_3 = str_1.toUpperCase();
+    console.log(str_3);
+    //转小写
+    var str_4 = str_3.toLowerCase();
+    console.log(str_4);
+    //获取长度
+    console.log(str_1.length);
+    //获取字符串在另一个字符串开始出现的位置
+    console.log(str_1.indexOf('world'));
+    //截取字符串
+    console.log(str_1.substring(0,5));
+</script>
+</html>

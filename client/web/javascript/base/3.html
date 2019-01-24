@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript 数组基本操作</title>
+</head>
+<body>
+</body>
+<script>
+    'use strict';
+
+    var arr_1 = [1,1.1,'str',[2,3],{name:"zjs"}];
+    console.log(arr_1);
+    //通过下标获取数组元素
+    console.log(arr_1[0]);      //1
+    console.log(arr_1[6]);      //undefined
+    //使用length会导致数组的长度的变化
+    var arr_2 = arr_1;
+    arr_2.length = 6;
+    console.log(arr_2);
+    arr_2.length = 2;
+    console.log(arr_2);
+    //获取一个元素的位置
+    console.log(arr_1.indexOf(1.1));
+    //截取属猪
+    console.log(arr_1.slice(0,3));
+    //向数组尾部插入和弹出元素
+    console.log(arr_1.push('push'));
+    console.log(arr_1.pop());
+    //向数组头部插入和弹出元素
+    console.log(arr_1.unshift('unshift'));
+    console.log(arr_1.shift());
+    //反转数组
+    console.log(arr_1.reverse());
+    //数组排序
+    console.log(arr_1.sort());
+    //数组操作
+    console.log(arr_1.splice(2,2,['a','b']));   //从第二个元素开始，删除两个元素，插入若干元素
+    //数组连接
+    var arr_3 = [1,2];
+    var arr_4 = [3,4];
+    console.log(arr_3.concat(arr_4));
+    //数组元素拼接成字符串
+    console.log(arr_3.join('-'));
+</script>
+</html>

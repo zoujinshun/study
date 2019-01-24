@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript 循环</title>
+</head>
+<body>
+</body>
+<script>
+    'use strict';
+
+    //for 循环
+    var x = 1;
+    var i;
+    for(i=1;i<=10;i++){
+        x = x * i;
+    }
+    console.log(x);
+
+    //for in 循环
+    var arr = ['zjs','love','dly'];
+    var obj = {
+        name : 'zjs',
+        age  : 23,
+        like : ['basketball','sing']
+    };
+    for (var key in arr) {
+        console.log('index:'+key);
+        console.log('value:'+arr[key]);
+    }
+    for (var key in obj){
+        console.log(key);
+    }
+
+    //wihle 循环
+    var n = 0;
+    while(n<10){
+        console.log(n);
+        n++;
+    }
+
+    //do while 循环
+    var n = 0;
+    do{
+        console.log(n);
+        n++;
+    }while(n==0)
+</script>
+</html>
