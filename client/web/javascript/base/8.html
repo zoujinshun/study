@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高阶函数</title>
+</head>
+<body>
+</body>
+<script>
+    'use strict';
+
+    // map 是Array的函数
+    var arr_1 = [1,2,3,4,5];
+    var f_1 = function(x){
+        return x*x;
+    }
+    console.log(arr_1.map(f_1));
+
+    //reduce 是Array的函数
+    var f_2 = function(x,y){
+        return x + y;
+    }
+    console.log(arr_1.reduce(f_2));
+
+    //fillter Array函数
+    var f_3 = function(x){
+        if(x < 3){
+            return false;
+        }
+        return true;
+    }
+    console.log(arr_1.filter(f_3));
+
+    //sort 字符串排序需要先转为大小写，sort方法使用ASCII码进行比较
+    var arr_2 = [10,30,3,6,1];
+    console.log(arr_2.sort(function(x,y){
+        if(x > y){
+            return 1;
+        }
+        if(x < y){
+            return -1;
+        }
+        return 0;
+    }));
+</script>
+</html>

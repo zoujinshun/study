@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbe17cdc-0819-4152-a521-be45f6de289c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/web/javascript/base/7.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/web/javascript/base/8.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,31 +14,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="7.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="7.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/web/javascript/base/7.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="659">
-              <caret line="98" column="22" lean-forward="true" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="22" />
+              <caret line="104" column="38" lean-forward="true" selection-start-line="104" selection-start-column="38" selection-end-line="104" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="5.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/web/javascript/base/5.html">
+      <file leaf-file-name="8.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/web/javascript/base/8.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="851">
-              <caret line="46" column="14" lean-forward="false" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="3.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/web/javascript/base/3.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="31" column="31" lean-forward="false" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+            <state relative-caret-position="512">
+              <caret line="33" column="43" lean-forward="false" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -66,6 +56,7 @@
         <option value="$PROJECT_DIR$/client/web/javascript/base/5.html" />
         <option value="$PROJECT_DIR$/client/web/javascript/base/6.html" />
         <option value="$PROJECT_DIR$/client/web/javascript/base/7.html" />
+        <option value="$PROJECT_DIR$/client/web/javascript/base/8.html" />
       </list>
     </option>
   </component>
@@ -76,7 +67,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="98" />
     <option name="y" value="274" />
     <option name="width" value="1667" />
@@ -168,15 +159,15 @@
       <option name="presentableId" value="Default" />
       <updated>1548225982135</updated>
       <workItem from="1548225984729" duration="6362000" />
-      <workItem from="1548295652750" duration="16868000" />
+      <workItem from="1548295652750" duration="18638000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23230000" />
+    <option name="totallyTimeSpent" value="25000000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21588486" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -292,7 +283,15 @@
     <entry file="file://$PROJECT_DIR$/client/web/javascript/base/7.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="659">
-          <caret line="98" column="22" lean-forward="true" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="22" />
+          <caret line="104" column="38" lean-forward="true" selection-start-line="104" selection-start-column="38" selection-end-line="104" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/web/javascript/base/8.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="33" column="43" lean-forward="false" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
           <folding />
         </state>
       </provider>
