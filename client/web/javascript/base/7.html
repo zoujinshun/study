@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function</title>
+</head>
+<body>
+</body>
+<script>
+    'use strict';
+
+    var f = function(x){
+        if(x >= 0){
+            return x;
+        }else{
+            return -x;
+        }
+    }
+    var x = f(); //没传参数收到的参数为 undefined
+    console.log(typeof x); //所以结果是NaN
+
+    // arguments
+    function f_2(a){
+        if(arguments.length > 1){
+            var all = new Array();
+            var i;
+            for(i=0;i<arguments.length;i++){
+                all.push(arguments[i]);
+            }
+            return all;
+        }
+        return a;
+    }
+    var v = f_2(1,2);
+    console.log(v);
+
+    //rest
+    function f_3(a,b,...rest){
+        var arr1 = [a,b];
+        var arr2 = rest;
+        var arr = arr1.concat(arr2);
+        console.log(arr);
+    }
+    f_3(1,2,3,4);
+
+    //变量作用域
+    function f_4(){
+        var str_1 = 'zjs';
+        var x = function(){
+            var str_1 = 'dly';
+            console.log(str_1);
+        }
+        console.log(str_1);
+        x();
+    }
+    f_4();
+
+    //块级作用域
+    function f_5(){
+        // 用let声明的变量只作用域块级
+        for(let i=0;i<3;i++){
+            console.log(i);
+        }
+        //报错
+        //console.log(i);
+    }
+    f_5();
+
+    //常量声明 const ,使用const声明的变量都具有块级作用域
+    const PI = 3.14;
+    console.log(PI);
+
+
+    //解构赋值
+    var [a,b,c] = ['a','b','c'];
+    var {name,age} = {
+        name : 'zjs',
+        age  : 23,
+        like : ['basketball','sing']
+    };
+    console.log(a,b,c,name,age);
+
+    // 对象的this
+    var zjs = {
+        name : 'zjs',
+        age  : 23,
+        sigture : function(){
+            console.log('my name is '+this.name,this.age+' years old','i love dly!!!');
+            var that = this;
+            var f = function(){
+                console.log(that.name);
+            }
+            f();
+        }
+    };
+    zjs.sigture();
+
+    //apply
+    function getNum(){
+        return this.num;
+    }
+    var obj = {
+        num : 1,
+    };
+    console.log(getNum.apply(obj,[]));
+
+
+</script>
+</html>
