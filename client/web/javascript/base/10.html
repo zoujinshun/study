@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>箭头函数</title>
+</head>
+<body>
+</body>
+<script>
+    'use strict';
+
+    var f = () => ({name:'zjs'});
+    console.log(f());
+
+    //箭头函数的this指向由上下文决定
+    var obj = {
+        name : 'zjs',
+        signture : function(){
+            var signture = () => 'my name is ' + this.name;
+            //使用箭头函数的方法apply和call第一个参数无效
+            signture.apply({name:'dly'},[]);
+            return signture;
+        }
+    };
+    console.log(obj.signture()());
+</script>
+</html>

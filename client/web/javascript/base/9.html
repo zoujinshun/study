@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包</title>
+</head>
+<body>
+</body>
+<script>
+    'use strict';
+
+    function count(){
+        var arr =[];
+        for(var i=0;i<3;i++){
+            arr.push(function(){
+                return i*i;
+            });
+        }
+        return arr;
+    }
+
+    //count方法返回的数组的每个元素值都是方法 return i*i;  i的值被引用为3，所以以下结果都是9
+    var result = count();
+    console.log(result[0]());
+    console.log(result[1]());
+    console.log(result[2]());
+
+
+    function count2() {
+        var arr = [];
+        for(var i=0;i<3;i++){
+            arr.push((function(n){
+                //这里多加一个方法，使得它立即执行，相当于直接返回结果
+                return function(){
+                    return n*n;
+                }
+            })(i));
+        }
+        return arr;
+    }
+    var result2 = count2();
+    console.log(result2);
+    console.log(result2[0]());
+    console.log(result2[1]());
+    console.log(result2[2]());
+
+    //计算器
+    function count3(initnum){
+        var x = initnum || 0;
+        return function(){
+            x = x+1;
+            return x;
+        }
+    }
+    var f = count3();
+    console.log(f());
+    console.log(f());
+    console.log(f());
+
+</script>
+</html>

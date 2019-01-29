@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript 面向对象编程</title>
+</head>
+<body>
+</body>
+<script>
+    'use strict';
+
+    var Student = {
+        name : '',
+        age  : 0,
+        run : function(){
+            console.log(this.name + ' is runing!!!');
+        }
+    };
+
+    var xiaoming = {
+        name : 'xiaoming'
+    };
+    xiaoming.__proto__ = Student;
+    xiaoming.run();
+    console.log(xiaoming.__proto__ === Student);
+
+    var xiaohong = new Object(Student);
+    console.log(xiaohong.__proto__ === Student);
+
+    var xiaolv = Object.create(Student);
+    console.log(xiaolv.__proto__ === Student);
+    xiaolv.name = 'xiaolv';
+    xiaolv.run();
+    
+</script>
+</html>

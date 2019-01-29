@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标准对象</title>
+</head>
+<body>
+</body>
+<script>
+    'use strict';
+
+    //DATE
+    var date = new Date(); //当前
+    var date2 = new Date(2019,0,28,12,12,12,123);
+    console.log(date.toISOString());
+    console.log(date2);
+    console.log(date.getFullYear());    //年份
+    console.log(date.getMonth());       //月份
+    console.log(date.getDate());        //日期
+    console.log(date.getDay());         //周几
+    console.log(date.getHours());       //小时
+    console.log(date.getMinutes());     //分钟
+    console.log(date.getTime());        //时间戳
+
+
+    //RegExp
+
+
+    //JSON
+    var obj = {
+        name : 'zjs',
+        age  : 23,
+        like : ['basketball','sing']
+    };
+    var str = JSON.stringify(obj,['name','age'],'    ');
+    console.log(str);
+    console.log(JSON.parse(str));
+</script>
+</html>

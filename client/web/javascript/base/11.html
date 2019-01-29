@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>generator</title>
+</head>
+<body>
+</body>
+<script>
+    'use strict';
+
+    function test(x){
+        var
+            a = 0,
+            b = 1,
+            arr = [0,1];
+        while (arr.length < x){
+            [a,b] = [b,a+b];
+            arr.push(b);
+        }
+        return arr;
+    }
+
+    var x = test(5);
+    console.log(x);
+
+    //使用generator
+    function* test2(x){
+        var
+            a = 0,
+            b = 1,
+            arr = [0,1];
+        yield arr[0];
+        yield arr[1];
+        while (arr.length < x){
+            [a,b] = [b,a+b];
+            arr.push(b);
+            yield b;
+        }
+        return;
+    }
+
+    var x2 = test2(5);
+    while (true){
+        var i = x2.next();
+        if(i.done == true){
+            break;
+        }
+        console.log(i.value);
+    }
+
+    for(var x of test2(5)){
+        console.log(x);
+    }
+
+</script>
+</html>
