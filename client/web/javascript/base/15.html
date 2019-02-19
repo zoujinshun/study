@@ -19,8 +19,19 @@
     }
 
     //继承
-    class Xiaoming extends Student(
-        constroctor
-    )
+    class Xiaoming extends Student {
+        constructor(name, props) {
+            super(name);
+            this.props = props;
+        }
+    }
+
+    var xiaoming = new Xiaoming('xiaoming',{age:23});
+    xiaoming.say();
+    console.log(xiaoming.props);
+
+    console.log(Object.getPrototypeOf(xiaoming) === Xiaoming.prototype);
+    console.log(xiaoming instanceof Xiaoming);
+    console.log(xiaoming instanceof Student);
 </script>
 </html>
