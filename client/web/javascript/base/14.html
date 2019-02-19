@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>构造对象</title>
+</head>
+<script>
+    'use strict';
+
+    function Student(props){
+        this.name = props.name || '未知';
+    }
+    Student.prototype.say = function(){
+        console.log('My name is '+this.name);
+    }
+    var xiaoming = new Student({name:'小明'});
+    xiaoming.say();
+    var xiaohong = new Student({name:'小红'});
+    xiaohong.say();
+
+
+    // Student.prototype 指向 xiaoming 和 xiaohong 的原型对象
+    //使用 new 构造对象时会给对象属性 constructor
+
+    console.log(Object.getPrototypeOf(xiaoming) === Student.prototype);
+    console.log(Object.getPrototypeOf(xiaohong) === Student.prototype);
+    console.log(Object.getPrototypeOf(xiaoming) === Object.getPrototypeOf(xiaohong));
+    console.log(xiaoming.constructor === Student.prototype.constructor);
+    console.log(Student === Student.prototype.constructor);
+
+    console.log(Object.getPrototypeOf(Student) === Object.__proto__);
+
+    var Test = {
+        run : function(msg){
+            console.log(msg);
+        }
+    };
+    var [test1,test2] = [{},{}];
+
+    test1.__proto__ = Test;
+    test1.run('test1');
+
+    test2 = Object.create(Test);
+    test2.run('test2');
+
+    console.log(test1.__proto__ === Test);
+    console.log(Object.getPrototypeOf(test2) === Test);
+</script>
+</html>
