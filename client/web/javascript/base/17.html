@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>错误处理</title>
+</head>
+<script>
+    'use strict';
+    var x = null;
+    try{
+        //可能会出现错误的代码块，出现错误立即停止执行
+        if(true){
+            //手动抛出错误对象语句
+            throw new Error('出错了');
+        }
+        var i = x.length;
+    }catch(e){
+        //当出现错误后执行该块内容
+        if(e instanceof TypeError || e instanceof ReferenceError){
+            console.log('error:类型或其他错误');
+        }else if(e instanceof Error){
+            console.log('error:'+e);
+        }
+    }finally {
+        //无论是否出现错误最后都会执行该代码
+        console.log('执行完毕');
+    }
+</script>
+</html>
