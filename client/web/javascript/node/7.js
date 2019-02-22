@@ -13,7 +13,7 @@ var next = function(){
     //Promise对象，
     return new Promise(function(success,fail){
         setTimeout(function(){
-            success('success');
+            fail('success');
         },5000);
     }).then(function(data){
         return data + '!';
